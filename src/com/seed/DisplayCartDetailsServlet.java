@@ -84,20 +84,28 @@ public class DisplayCartDetailsServlet extends HttpServlet {
 		
 //		TODO:5	display product details in tabular format as HTTP response(text/html) to the web-client
 		
-		/*out.println("<html><body>");
-		out.println("<table border=1>");
-		out.println("<th>Book Name</th>");
+		out.println("<html><body>");
 		
-		for(String s: products){
-			out.println("<tr>");
-			out.println("<td>"+s+"</td>");
-			out.println("</tr>");
-		}
+		out.println("<table border=1>");
+		
+		out.println("<th>Product Id</th>");
+		out.println("<th>Name</th>");
+		out.println("<th>Price</th>");
+		
+		if(products!=null)
+			for(Product p: products){
+				out.println("<tr>");
+				out.println("<td>"+p.getId()+"</td>");
+				out.println("<td>"+p.getName()+"</td>");
+				out.println("<td>"+p.getPrice()+"</td>");
+				out.println("</tr>");
+			}
 		
 		out.println("</table>");
-		out.println("<html><body>");*/
 		
-		response.sendRedirect("displayDetails");
+		out.println("</body></html>");
+		
+		//response.sendRedirect("displayDetails");
 			
 	}
 

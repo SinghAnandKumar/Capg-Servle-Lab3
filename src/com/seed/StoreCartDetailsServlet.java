@@ -51,6 +51,7 @@ public class StoreCartDetailsServlet extends HttpServlet{
 		
 //		TODO:5 add these product ids in the ShoppingCart object referenced by "cartRef" local variable
 			cartRef.setProductList(ids);
+			session.setAttribute("shoppingCart", cartRef);
 
 			
 //		TODO:6	if the user clicks "Shop More?" in "bookCatelogue.html", 
